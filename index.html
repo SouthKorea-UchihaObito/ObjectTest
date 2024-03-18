@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Obj</h1>
+    <script>
+        // 객체 생성 빈 객체
+        // const person = {}; // 객체 생성
+        // person.name = 'shim'; // 객체 속성
+        // person.age = '26';
+        
+        // person.introduce = function(){ // 객체 생성인 애들 중 method, 메소드 값이 함수인 애들
+        //     console.log('안녕하세요 저는 심재훈이고 나이는 26살 입니다.')
+        // }
+        // person.introduce();
+
+        // 객체 생성 
+        const person = {
+            nickName : 'shim',
+            age : '26',
+            introduce : function(){
+                console.log('안녕하세요 저는' + this.nickName +' 입니다. 나이는' + this.age + '입니다.');
+            }
+        }
+       
+        const person2 = {
+            nickName : 'jeo',
+            age : '25',
+            introduce : function(){
+                console.log('안녕하세요 저는' + this.nickName +' 입니다. 나이는' + this.age + '입니다.');
+            }
+        }
+
+        person.introduce(); // this 라는것은 객체가 메서드를 실행했을때 메서드를 실행할 주체 객체를 가리킨다. <- 간단하게 설명하는 구문
+        person2.introduce();
+
+        // 자바스크립트 함수 내부에서의 this 라는것은 함수가 실행되는 컨테스트 에따라서 값이 바뀜
+    </script>
+</body>
+</html>
